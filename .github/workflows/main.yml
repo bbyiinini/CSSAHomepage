@@ -16,3 +16,6 @@ jobs:
     steps:
       - name: ESLint checker
         uses: ninosaurus/eslint-check@v5.3.1
+        with:
+          custom-directory: ./src/
+          eslint-config-path: ./
