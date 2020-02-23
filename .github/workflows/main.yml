@@ -21,4 +21,4 @@ jobs:
       - name: check eslint
         run: |
           cd ..
-          eslint src/**/*.js 
+          npx eslint src/**/*.js 
