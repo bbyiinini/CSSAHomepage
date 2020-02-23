@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
-import Logo from "./Logo";
-// https://dev.to/nunocpnp/your-very-first-responsive-and-animated-navigation-bar-with-react-and-react-spring-17co
+import logoFile from '../../assets/logo.png'
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 import PropTypes from 'prop-types'
@@ -24,7 +23,7 @@ const Navbar = (props) => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          <Logo />
+          <Logo src={logoFile} alt="CSSA Logo" />
           <NavLinks style={linkAnimation}>
             <li><a href="/">PM</a>
               <ul>
@@ -162,3 +161,7 @@ const BurgerWrapper = styled.div`
   }
 `;
 
+const Logo = styled.img`
+  height: 85%;
+  margin: auto 0;
+`;
