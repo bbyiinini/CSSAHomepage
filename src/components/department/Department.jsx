@@ -1,16 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { AvMicNone } from 'material-ui/svg-icons';
+import tech from '../../assets/tech.png'
+import extern from '../../assets/extern.png'
+import pub from '../../assets/pub.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   row:{
-    margin: '10em 0'
+    margin: '10em 15% 10em 30%'
   },
   paper: {
     padding: theme.spacing(2),
@@ -23,41 +25,67 @@ const useStyles = makeStyles(theme => ({
   },
   large: {
     margin:'0 auto',
-    width: theme.spacing(7),
-    height: theme.spacing(7),
+    width: theme.spacing(15),
+    height: theme.spacing(15),
   },
 }));
 
 export default function AutoGrid() {
   const classes = useStyles();
 
-  function FormRow() {
+  function FirstRow() {
     return (
-      <React.Fragment>
+      <>
         <Grid item xs>
-            <Avatar alt="Remy Sharp" src="../../logo192.png" className={classes.large} />
+          <Button>
+            <Avatar alt="Technology" src={tech} className={classes.large}/>
+          </Button>
         </Grid>
         <Grid item xs>
-            <Avatar alt="Remy Sharp" src="../../logo192.png" className={classes.large} />
+          <Button>
+            <Avatar alt="Extern" src={extern} className={classes.large}/>
+          </Button>
         </Grid>
         <Grid item xs>
-            <Avatar alt="Remy Sharp" src="../../logo192.png" className={classes.large} />
+          <Button>
+            <Avatar alt="Publicize" src={pub} className={classes.large} />
+          </Button>
         </Grid>
-      </React.Fragment>
+      </>
+    );
+  }
+
+  function SecondRow() {
+    return (
+      <>
+        <Grid item xs>
+        {/** TODO: add href for department pages */}
+          <Button href="">
+            <Avatar alt="Technology" src={tech} className={classes.large}/>
+          </Button>
+        </Grid>
+        <Grid item xs>
+          <Button>
+            <Avatar alt="Extern" src={extern} className={classes.large}/>
+          </Button>
+        </Grid>
+        <Grid item xs>
+          <Button>
+            <Avatar alt="Publicize" src={pub} className={classes.large} />
+          </Button>
+        </Grid>
+      </>
     );
   }
 
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid container item xs={12} spacing={0} className={classes.row}>
-          <FormRow />
+        <Grid container item xs={20} spacing={15} className={classes.row}>
+          <FirstRow />
         </Grid>
-        <Grid container item xs={12} spacing={0} className={classes.row}>
-          <FormRow />
-        </Grid>
-        <Grid container item xs={12} spacing={0} className={classes.row}>
-          <FormRow />
+        <Grid container item xs={20} spacing={15} className={classes.row}>
+          <SecondRow />
         </Grid>
       </Grid>
     </div>
