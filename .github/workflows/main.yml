@@ -1,4 +1,4 @@
-name: CI
+name: Eslint Checker
 
 on :
   push:
@@ -18,10 +18,7 @@ jobs:
         run: |
           cd ..
           npm i --ignore-scripts
-        
-      - name: ESLint checker
-        uses: ninosaurus/eslint-check@v5.3.1
-        with:
-          repo-token: ${{secrets.GITHUB_TOKEN}}
-          custom-directory: ./src/
-          eslint-config-path: ./
+      - name: check eslint
+        run: |
+          cd ..
+          eslint src/**/*.js 
