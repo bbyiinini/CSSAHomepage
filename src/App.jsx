@@ -3,19 +3,19 @@ import Navbar from "./components/navbar/Navbar";
 import SimpleImageSlider from "react-simple-image-slider";
 import Department from "./components/department/Department"
 import GlobalStyle from "./styles/global/Global";
-
-
-
-import logo from './logo.svg';
-//import './App.css';
+import homepageImage from './assets/homepage_newstudents_services.png'
 
 class App extends Component {
-  state = {
-    navbarOpen: false,
-    silde_didMount: false
+  constructor(props){
+    super(props)
+    this.state = {
+      navbarOpen: false,
+      silde_didMount: false
+    }
   }
 
-  handleNavbar = () => {
+
+  handleNavbar (){
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
@@ -27,8 +27,7 @@ class App extends Component {
 
   render() {
     const images = [
-      { url: "./logo192.png" },
-      { url: "./logo192.png" },
+       { url: homepageImage}
     ];
     const {didMount} = this.state;
 
@@ -57,34 +56,12 @@ class App extends Component {
           />
           <Department/>
         </div>
-       
-        
         <GlobalStyle />
       </>
     );
     
   }
 }
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 export default App;
 
 
