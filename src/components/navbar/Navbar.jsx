@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
-
 import Logo from "./Logo";
 // https://dev.to/nunocpnp/your-very-first-responsive-and-animated-navigation-bar-with-react-and-react-spring-17co
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
+import PropTypes from 'prop-types'
 
 const Navbar = (props) => {
   const barAnimation = useSpring({
@@ -82,6 +82,13 @@ const NavBar = styled(animated.nav)`
   font-size: 1.4rem;
 `;
 
+Navbar.propTypes = {
+  navbarState: PropTypes.bool, 
+  handleNavbar: PropTypes.func
+}
+
+
+
 const FlexContainer = styled.div`
   max-width: 120rem;
   display: flex;
@@ -154,3 +161,4 @@ const BurgerWrapper = styled.div`
     display: none;
   }
 `;
+
