@@ -12,7 +12,11 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   row:{
-    margin: '10em 15% 10em 30%'
+    margin: '10em 15% 10em 15%'
+  },
+  button:{
+    left: '50%',
+    transform: 'translateX(-50%)'
   },
   paper: {
     padding: theme.spacing(2),
@@ -37,17 +41,17 @@ export default function AutoGrid() {
     return (
       <>
         <Grid item xs>
-          <Button>
+          <Button className={classes.button}>
             <Avatar alt="Technology" src={tech} className={classes.large}/>
           </Button>
         </Grid>
         <Grid item xs>
-          <Button>
+          <Button className={classes.button}>
             <Avatar alt="Extern" src={extern} className={classes.large}/>
           </Button>
         </Grid>
         <Grid item xs>
-          <Button>
+          <Button className={classes.button}>
             <Avatar alt="Publicize" src={pub} className={classes.large} />
           </Button>
         </Grid>
@@ -60,17 +64,17 @@ export default function AutoGrid() {
       <>
         <Grid item xs>
         {/** TODO: add href for department pages */}
-          <Button href="">
+          <Button href="" className={classes.button}>
             <Avatar alt="Technology" src={tech} className={classes.large}/>
           </Button>
         </Grid>
         <Grid item xs>
-          <Button>
+          <Button className={classes.button}>
             <Avatar alt="Extern" src={extern} className={classes.large}/>
           </Button>
         </Grid>
         <Grid item xs>
-          <Button>
+          <Button className={classes.button}>
             <Avatar alt="Publicize" src={pub} className={classes.large} />
           </Button>
         </Grid>
@@ -81,10 +85,10 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid container item xs={20} spacing={15} className={classes.row}>
+        <Grid container item xs={12} spacing={10} className={classes.row}>
           <FirstRow />
         </Grid>
-        <Grid container item xs={20} spacing={15} className={classes.row}>
+        <Grid container item xs={12} spacing={10} className={classes.row}>
           <SecondRow />
         </Grid>
       </Grid>
