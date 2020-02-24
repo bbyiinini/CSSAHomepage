@@ -16,7 +16,12 @@ const useStyles = makeStyles(theme => ({
   },
   button:{
     left: '50%',
-    transform: 'translateX(-50%)'
+    transform: 'translateX(-50%)',
+    display: 'contents'
+  },
+  title:{
+    display: 'block',
+    fontSize: '3em',
   },
   paper: {
     padding: theme.spacing(2),
@@ -31,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     margin:'0 auto',
     width: theme.spacing(15),
     height: theme.spacing(15),
+    display:'block',
   },
 }));
 
@@ -43,16 +49,19 @@ export default function AutoGrid() {
         <Grid item xs>
           <Button className={classes.button}>
             <Avatar alt="Technology" src={tech} className={classes.large}/>
+            <p className={classes.title}>A</p>
           </Button>
         </Grid>
         <Grid item xs>
           <Button className={classes.button}>
             <Avatar alt="Extern" src={extern} className={classes.large}/>
+            <p className={classes.title}>B</p>
           </Button>
         </Grid>
         <Grid item xs>
           <Button className={classes.button}>
             <Avatar alt="Publicize" src={pub} className={classes.large} />
+            <p className={classes.title}>C</p>
           </Button>
         </Grid>
       </>
@@ -66,16 +75,19 @@ export default function AutoGrid() {
         {/** TODO: add href for department pages */}
           <Button href="" className={classes.button}>
             <Avatar alt="Technology" src={tech} className={classes.large}/>
+            <p className={classes.title}>D</p>
           </Button>
         </Grid>
         <Grid item xs>
           <Button className={classes.button}>
             <Avatar alt="Extern" src={extern} className={classes.large}/>
+            <p className={classes.title}>E</p>
           </Button>
         </Grid>
         <Grid item xs>
           <Button className={classes.button}>
             <Avatar alt="Publicize" src={pub} className={classes.large} />
+            <p className={classes.title}>F</p>
           </Button>
         </Grid>
       </>
