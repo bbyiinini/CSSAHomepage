@@ -15,7 +15,7 @@ class App extends Component {
   }
 
 
-  handleNavbar (){
+  handleNavbar = () =>{
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
