@@ -15,11 +15,12 @@ class App extends Component {
   }
 
 
-  handleNavbar = () =>{
+  handleNavbar() {
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
   componentDidMount(){
+    document.title = "UCSD CSSA"
     setTimeout(() => {
       this.setState({didMount: true})
     }, 0)
