@@ -4,6 +4,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 import Department from "./components/department/Department"
 import GlobalStyle from "./styles/global/Global";
 import homepageImage from './assets/homepage_newstudents_services.png'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
   constructor(props){
@@ -43,22 +44,29 @@ class App extends Component {
     
 
     return (
-      <>
+      <Router>
         <Navbar 
           navbarState={this.state.navbarOpen} 
           handleNavbar={this.handleNavbar}
         />
-        <div className={`slide-fade-in ${didMount && 'visible'}`}>
-          <SimpleImageSlider
-            width={window.innerWidth}
-            height={504}
-            images={images}
-            style={{ margin: "0 auto", marginTop: "50px"}}
-          />
-          <Department/>
-        </div>
+        <Switch>
+          <Route exact path="/">
+            <div className={`slide-fade-in ${didMount && 'visible'}`}>
+              <SimpleImageSlider
+                width={window.innerWidth}
+                height={504}
+                images={images}
+                style={{ margin: "0 auto", marginTop: "50px"}}
+              />
+              <Department/>
+            </div>
+          </Route>
+          <Route exact path="/tech">
+            <h1>技术部</h1>
+          </Route>
+        </Switch>
         <GlobalStyle />
-      </>
+      </Router>
     );
     
   }
