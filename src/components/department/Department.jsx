@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import tech from '../../assets/tech.png'
 import extern from '../../assets/extern.png'
 import pub from '../../assets/pub.png'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,11 +18,14 @@ const useStyles = makeStyles(theme => ({
   button:{
     left: '50%',
     transform: 'translateX(-50%)',
-    display: 'contents'
+    display: 'contents',
+    height: '100%',
+    width:'100%'
   },
   title:{
     display: 'block',
     fontSize: '3em',
+    textDecoration: 'none'
   },
   paper: {
     padding: theme.spacing(2),
@@ -72,14 +76,15 @@ export default function AutoGrid() {
     return (
       <>
         <Grid item xs>
-        {/** TODO: add href for department pages */}
-          <Button href="" className={classes.button}>
-            <Avatar alt="Technology" src={tech} className={classes.large}/>
-            <p className={classes.title}>D</p>
+          <Button className={classes.button}>
+            <Link to="/tech">
+              <Avatar alt="Technology" src={tech} className={classes.large}/>
+              <p className={classes.title}>D</p>
+            </Link>
           </Button>
         </Grid>
         <Grid item xs>
-          <Button className={classes.button}>
+          <Button className={classes.button} disableRipple={true}>
             <Avatar alt="Extern" src={extern} className={classes.large}/>
             <p className={classes.title}>E</p>
           </Button>
