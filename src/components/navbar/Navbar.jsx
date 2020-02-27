@@ -6,6 +6,7 @@ import logoMobile from '../../assets/logo.png'
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Navbar = (props) => {
 
@@ -27,7 +28,9 @@ const Navbar = (props) => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          <Logo src={isMobile ? logoMobile : logoFile} alt="CSSA Logo" />
+          <Link to="/" style={{height: '85px', width: '382px'}}>
+            <Logo src={isMobile ? logoMobile : logoFile} alt="CSSA Logo" />
+          </Link>
           <NavLinks style={linkAnimation}>
             <li><a href="/">PM</a>
               <ul>
@@ -89,8 +92,6 @@ Navbar.propTypes = {
   navbarState: PropTypes.bool, 
   handleNavbar: PropTypes.func
 }
-
-
 
 const FlexContainer = styled.div`
   max-width: 120rem;
@@ -165,6 +166,6 @@ const BurgerWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 85%;
-  margin: auto 0;
+  height: 100%;
+  margin: 2% 0;
 `;
