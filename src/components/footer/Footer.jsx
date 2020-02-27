@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import QRcode0 from '../../assets/QRcode_0.png'
 import QRcode1 from '../../assets/QRcode_1.jpg'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
 	root: {
     flexGrow: 1,
   },
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Footer = (props) => {
+const Footer = () => {
 
 	const classes = useStyles();
 
@@ -26,10 +26,10 @@ const Footer = (props) => {
 			</p>
 			<Grid container className={classes.root}>
 				<Grid item xs>
-					<img src={QRcode0} className={classes.center}></img>
+					<img alt="QRCode0"src={QRcode0} className={classes.center}></img>
 				</Grid>
 				<Grid item xs>
-					<img src={QRcode1} className={classes.center}></img>
+					<img alt="QRCode1" src={QRcode1} className={classes.center}></img>
 				</Grid>
 			</Grid>
 		</FooterWrapper>
