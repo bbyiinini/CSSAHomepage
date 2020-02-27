@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import Navbar from "./components/navbar/Navbar";
 import SimpleImageSlider from "react-simple-image-slider";
-import Department from "./components/department/Department"
+import Department from "./components/department/Department";
+import Footer from "./components/footer/Footer";
 import GlobalStyle from "./styles/global/Global";
 import homepageImage from './assets/homepage_newstudents_services.png'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
 
 class App extends Component {
   constructor(props){

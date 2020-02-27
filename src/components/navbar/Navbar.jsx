@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from "styled-components";
 import { useSpring, animated, config } from "react-spring";
-import logoFile from '../../assets/logo.png'
+import logoFile from '../../assets/logo_name.png'
+import logoMobile from '../../assets/logo.png'
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
 import PropTypes from 'prop-types'
 
 const Navbar = (props) => {
+
+  const isMobile = window.innerWidth < 480;
+
   const barAnimation = useSpring({
     from: { transform: 'translate3d(0, -10rem, 0)' },
     transform: 'translate3d(0, 0, 0)',
@@ -23,7 +27,7 @@ const Navbar = (props) => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          <Logo src={logoFile} alt="CSSA Logo" />
+          <Logo src={isMobile ? logoMobile : logoFile} alt="CSSA Logo" />
           <NavLinks style={linkAnimation}>
             <li><a href="/">PM</a>
               <ul>
@@ -76,9 +80,9 @@ const NavBar = styled(animated.nav)`
   width: 100%;
   top: 0;
   left: 0;
-  background: #2d3436;
+  background: #ffffff;
   z-index: 1;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 `;
 
 Navbar.propTypes = {
@@ -94,7 +98,7 @@ const FlexContainer = styled.div`
   margin: auto;
   padding: 0 2rem;
   justify-content: space-between;
-  height: 5rem;
+  height: 10rem;
 `;
 
 const NavLinks = styled(animated.ul)`
@@ -105,18 +109,17 @@ const NavLinks = styled(animated.ul)`
 
   & ul {
     display: none;
-    background-color: #2d3436;
+    background-color: #ffffff;
     position: absolute;
     width: 160px;
-    text-shadow: 0 0 0px black;
     list-style: none;
     & li{
       float: none;
       padding: 0;
-      border-left: 1px solid #2d3436;
-      border-right: 1px solid #2d3436;
-      border-top: 1px solid #2d3436;
-      color: #ffffff;
+      border-left: 1px solid #eaeaea;
+      border-right: 1px solid #eaeaea;
+      border-top: 1px solid #eaeaea;
+      color: #666666;
       transition: all 300ms linear 0s;
       cursor: pointer;
       &:hover{
@@ -133,8 +136,8 @@ const NavLinks = styled(animated.ul)`
   }
 
   & a {
-    color: #dfe6e9;
-    line-height: 50px;
+    color: #666666;
+    line-height: 100px;
     font-weight: 600;
     border-bottom: 1px solid transparent;
     margin: 0 1.5rem;
