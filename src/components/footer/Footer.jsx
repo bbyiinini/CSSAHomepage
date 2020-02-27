@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import QRcode from '../../assets/QRcode.jpg'
+import QRcode0 from '../../assets/QRcode_0.png'
+import QRcode1 from '../../assets/QRcode_1.jpg'
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -25,10 +26,10 @@ const Footer = (props) => {
 			</p>
 			<Grid container className={classes.root}>
 				<Grid item xs>
-					<img src={QRcode} className={classes.center}></img>
+					<img src={QRcode0} className={classes.center}></img>
 				</Grid>
 				<Grid item xs>
-					<img src={QRcode} className={classes.center}></img>
+					<img src={QRcode1} className={classes.center}></img>
 				</Grid>
 			</Grid>
 		</FooterWrapper>
