@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Navbar from "./components/navbar/Navbar";
 import SimpleImageSlider from "react-simple-image-slider";
-import Department from "./components/department/Department"
+import Department from "./components/department/Department";
+import Footer from "./components/footer/Footer";
 import GlobalStyle from "./styles/global/Global";
-import homepageImage from './assets/homepage_newstudents_services.png'
+import homepageImage from './assets/homepage_newstudents_services.png';
 
 class App extends Component {
   constructor(props){
@@ -55,6 +56,7 @@ class App extends Component {
             style={{ margin: "0 auto", marginTop: "50px"}}
           />
           <Department/>
+          <Footer/>
         </div>
         <GlobalStyle />
       </>
