@@ -5,7 +5,8 @@ import Department from "./components/department/Department";
 import Footer from "./components/footer/Footer";
 import GlobalStyle from "./styles/global/Global";
 import homepageImage from './assets/homepage_newstudents_services.png'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Tech from './pages/Tech/Tech'
 
 
 class App extends Component {
@@ -61,10 +62,11 @@ class App extends Component {
                 style={{ margin: "0 auto", marginTop: "50px"}}
               />
               <Department/>
+              <Footer />
             </div>
           </Route>
           <Route exact path="/tech">
-            <h1>技术部</h1>
+            <Tech />
           </Route>
         </Switch>
         <GlobalStyle />
