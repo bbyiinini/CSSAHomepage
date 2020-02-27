@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   center:{
-    margin: '0 auto',
+		maxWidth: '300px'
   },
 }));
 
