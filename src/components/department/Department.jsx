@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import tech from '../../assets/tech.png'
 import extern from '../../assets/extern.png'
 import pub from '../../assets/pub.png'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
