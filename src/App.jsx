@@ -19,7 +19,7 @@ class App extends Component {
   }
 
 
-  handleNavbar() {
+  handleNavbar = () =>{
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
@@ -62,13 +62,14 @@ class App extends Component {
                 style={{ margin: "0 auto", marginTop: "50px"}}
               />
               <Department/>
-              <Footer />
+              
             </div>
           </Route>
           <Route exact path="/tech">
             <Tech />
           </Route>
         </Switch>
+        <Footer />
         <GlobalStyle />
       </Router>
     );

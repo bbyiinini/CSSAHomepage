@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 import { useSpring, animated } from 'react-spring';
 
@@ -16,11 +17,11 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-            <li><a href="/">PM</a></li>
+            <li><Link to="/" onClick={()=>props.handleNavbar()}><a>PM</a></Link></li>
             <li><a href="/">学术</a></li>
             <li><a href="/">宣传</a></li>
             <li><a href="/">外联</a></li>
-            <li><a href="/">技术</a></li>
+            <li><Link to="/tech" onClick={()=>props.handleNavbar()}><a>技术</a></Link></li>
             <li><a href="/">文体</a></li>
         </NavLinks>
       </CollapseWrapper>
