@@ -65,9 +65,7 @@ class App extends Component {
               
             </div>
           </Route>
-          <Route exact path="/tech">
-            <Tech />
-          </Route>
+          <Route exact path="/tech" exact component={Tech}/>
         </Switch>
         <Footer />
         <GlobalStyle />

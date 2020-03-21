@@ -77,16 +77,18 @@ export default function AutoGrid() {
       <>
         <Grid item xs>
           <Button className={classes.button}>
-            <Link to="/tech">
+            <Link to={{pathname: '/tech',state: {depData:'Jishu'}}}>
               <Avatar alt="Technology" src={tech} className={classes.large}/>
               <p className={classes.title}>D</p>
             </Link>
           </Button>
         </Grid>
         <Grid item xs>
-          <Button className={classes.button} disableRipple={true}>
-            <Avatar alt="Extern" src={extern} className={classes.large}/>
-            <p className={classes.title}>E</p>
+          <Button className={classes.button}>
+            <Link to={{pathname: '/tech',state: {depData:'Xuanchuan'}}}>
+              <Avatar alt="Extern" src={extern} className={classes.large}/>
+              <p className={classes.title}>E</p>
+            </Link>
           </Button>
         </Grid>
         <Grid item xs>
