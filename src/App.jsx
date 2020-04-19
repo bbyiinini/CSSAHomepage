@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Navbar from "./components/navbar/Navbar";
 import SimpleImageSlider from "react-simple-image-slider";
-import Department from "./components/department/Department";
+import DeptGrid from "./components/DeptGrid/DeptGrid";
 import Footer from "./components/footer/Footer";
 import GlobalStyle from "./styles/global/Global";
 import homepageImage from './assets/homepage_newstudents_services.png'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Tech from './pages/Tech/Tech'
+import Department from './components/Department/Department'
 
 
 class App extends Component {
@@ -61,13 +61,16 @@ class App extends Component {
                 images={images}
                 style={{ margin: "0 auto", marginTop: "50px"}}
               />
-              <Department/>
-              
+              <DeptGrid />
+              <Footer />
             </div>
           </Route>
-          <Route exact path="/tech" exact component={Tech}/>
+          <Route exact path="/tech" component={() => <Department name={"jishu"}/>}/>
+          <Route exact path="/xueshu" component={()=><Department name={"xueshu"}/>}/>
+          <Route exact path="/wailian" component={()=><Department name={"wailian"}/>}/>
+          <Route exact path="/xuanchuan" component={()=><Department name={"xuanchuan"}/>}/>
         </Switch>
-        <Footer />
+
         <GlobalStyle />
       </Router>
     );
