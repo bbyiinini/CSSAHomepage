@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
   },
   button:{
     left: '50%',
-    transform: 'translateX(-50%)',
     display: 'contents',
     height: '100%',
     width:'100%'
@@ -25,7 +24,8 @@ const useStyles = makeStyles(theme => ({
   title:{
     display: 'block',
     fontSize: '2.5em',
-    padding: '0 2em'
+    paddingTop: '0.3em',
+    textAlign: 'center'
   },
   paper: {
     padding: theme.spacing(2),
@@ -51,20 +51,20 @@ export default function AutoGrid() {
     return (
       <>
         <Grid item xs>
-          <Button className={classes.button} href="/tech" disableRipple>
-            <Avatar alt="Technology" src={tech} className={classes.large}/>
+          <Button className={classes.button} href="/jishu" disableRipple>
+            <Avatar alt="Jishu" src={tech} className={classes.large}/>
             <p className={classes.title}>技术部</p>
           </Button>
         </Grid>
         <Grid item xs>
           <Button className={classes.button} disableRipple href="/wailian">
-            <Avatar alt="Extern" src={extern} className={classes.large}/>
+            <Avatar alt="Wailian" src={extern} className={classes.large}/>
             <p className={classes.title}>外联部</p>
           </Button>
         </Grid>
         <Grid item xs>
           <Button className={classes.button} disableRipple href="/xuanchuan">
-            <Avatar alt="Publicize" src={pub} className={classes.large} />
+            <Avatar alt="Xuanchuan" src={pub} className={classes.large} />
             <p className={classes.title}>宣传部</p>
           </Button>
         </Grid>

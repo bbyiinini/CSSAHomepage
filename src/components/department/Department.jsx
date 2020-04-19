@@ -4,7 +4,7 @@ import Avatar from '@material-ui/core/Avatar'
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types'
 
-class Department extends React.Component {
+class Department extends Component {
   render() {
     const classes = makeStyles(theme => ({
       root: {

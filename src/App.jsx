@@ -19,7 +19,7 @@ class App extends Component {
   }
 
 
-  handleNavbar = () =>{
+  handleNavbar(){
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
@@ -65,7 +65,7 @@ class App extends Component {
               <Footer />
             </div>
           </Route>
-          <Route exact path="/tech" component={() => <Department name={"jishu"}/>}/>
+          <Route exact path="/jishu" component={() => <Department name={"jishu"}/>}/>
           <Route exact path="/xueshu" component={()=><Department name={"xueshu"}/>}/>
           <Route exact path="/wailian" component={()=><Department name={"wailian"}/>}/>
           <Route exact path="/xuanchuan" component={()=><Department name={"xuanchuan"}/>}/>
