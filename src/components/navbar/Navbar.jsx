@@ -43,7 +43,7 @@ const Navbar = (props) => {
             <li><a href="/">学术</a></li>
             <li><a href="/">宣传</a></li>
             <li><a href="/">外联</a></li>
-            <li><Link to={{pathname: '/tech',state: {depData:'Jishu'}}}>技术</Link>
+            <li><Link to={{pathname: '/jishu',state: {depData:'Jishu'}}}>技术</Link>
               <ul>
                 <li>abs</li>
                 <li>bs</li>

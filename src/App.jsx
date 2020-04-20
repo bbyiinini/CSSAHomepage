@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer";
 import GlobalStyle from "./styles/global/Global";
 import homepageImage from './assets/homepage_newstudents_services.png'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Department from './components/Department/Department'
+import Department from './components/department/Department'
 
 
 class App extends Component {
